@@ -1,0 +1,117 @@
+body {
+    /* background-color: #65686b; */
+    background-image: url('./image/2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  
+.container {
+    padding: 40px;
+}
+
+.calendar {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fcf9fb;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+
+
+#current-month-year {
+    margin: 0;
+    font-size: 24px;
+    color: #343a40;
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table th {
+    text-align: center;
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+}
+
+.table td {
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.table td:hover {
+    background-color: #e9ecef;
+}
+
+.table .text-muted {
+    color: #ced4da;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px; /* Adjust padding for medium screens */
+    }
+
+    .calendar {
+        padding: 40px; /* Adjust padding for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar {
+        padding: 20px; /* Further adjust padding for smaller screens */
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #current-month-year {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+
+    .table th,
+    .table td {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #current-month-year {
+        font-size: 18px; /* Further reduce font size for very small screens */
+    }
+
+    .table th,
+    .table td {
+        padding: 5px; /* Further reduce padding for very small screens */
+    }
+
+    .table td.today {
+        font-size: 0.9em; /* Adjust font size for today’s cell */
+    }
+}
